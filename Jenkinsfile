@@ -1,37 +1,26 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE_NAME = 'pokemon-react'
-        CONTAINER_NAME = 'pokemon-react-container'
-    }
-
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Krish942/Pokemon_Website-React-JS-.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/Krish942/Pokemon_Website-React-JS-.git', branch: 'main'
             }
         }
 
-        stage('Install & Build') {
+        stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                sh 'npm install'   // or your build command
             }
         }
 
-        stage('Docker Build') {
+        stage('Deploy') {
             steps {
-                sh 'docker build -t $IMAGE_NAME .'
-            }
-        }
-
-        stage('Docker Run') {
-            steps {
-                sh '''
-                    docker rm -f $CONTAINER_NAME || true
-                    docker run -d -p 3000:80 --name $CONTAINER_NAME $IMAGE_NAME
-                '''
+                sshagent(['ec2-key']) {
+                    sh '''
+                    ssh -o StrictHostKeyChecking=no ubuntu@<EC2-IP> 'cd ~/app-folder && git pull && npm install && pm2 restart all'
+                    '''
+                }
             }
         }
     }
