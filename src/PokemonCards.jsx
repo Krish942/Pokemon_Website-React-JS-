@@ -39,7 +39,7 @@ export const PokemonCards = ({ pokemonData }) => {
         </div>
         <div className="pokemon-info">
           <p>{pokemonData.stats[1].base_stat}</p>
-          <span>Attack:</span>
+          <span>Attack123:</span>
         </div>
         <div className="pokemon-info">
           <p>

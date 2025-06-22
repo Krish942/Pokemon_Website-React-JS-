@@ -27,25 +27,20 @@ h1 {
   color: #000 !important;
   text-align: center;
 }
-
 p,
 span {
   font-size: 1.6rem;
 }
-
 li {
   list-style: none;
 }
-
 span {
   font-weight: bold;
 }
-
 .container {
   max-width: 152rem;
   margin: auto;
 }
-
 .grid-three-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,7 +49,6 @@ span {
   margin: 3.2rem 0;
   align-items: end;
 }
-
 header {
   margin: 3.2rem 0;
 }
