@@ -47,7 +47,7 @@ import { PokemonCards } from "./PokemonCards";
   if (loading) {
     return (
       <div>
-        <h1>Loading...123456733337.</h1>
+        <h1>Loading...17.</h1>
       </div>
     );
   }
