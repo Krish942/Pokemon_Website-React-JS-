@@ -65,7 +65,7 @@ import { PokemonCards } from "./PokemonCards";
     <>
       <section className="container">
         <header>
-          <h1> Hello Pokkemon</h1>
+          <h1> Hello Pokkemon hehhee</h1>
         </header>
         <div className="pokemon-search">
           <input
