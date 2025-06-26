@@ -76,7 +76,7 @@ const Pokemon = () => {
   };
 
   if (loading) {
-    return <h1>Loading....</h1>;
+    return <h1>Loading...2222.</h1>;
   }
 
   if (error) {
@@ -93,7 +93,7 @@ const Pokemon = () => {
   return (
     <section className="container">
       <header>
-        <h1>Let's Catch Pokémon</h1>
+        <h1>Let's Catch Pokémon ok</h1>
       </header>
 
       <div className="controls">
@@ -111,7 +111,7 @@ const Pokemon = () => {
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
         >
-          <option value="asc">Sort A - Z</option>
+          <option value="asc">Sort A - 888</option>
           <option value="desc">Sort Z - A</option>
         </select>
 
