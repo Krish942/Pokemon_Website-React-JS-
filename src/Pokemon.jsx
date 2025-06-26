@@ -93,7 +93,7 @@ const Pokemon = () => {
   return (
     <section className="container">
       <header>
-        <h1>Let's Catch Pokémon ok huiytrmccc k kk,</h1>
+        <h1>Let's Catch Pokémon ok huiytrmccc k kk,123</h1>
       </header>
 
       <div className="controls">
