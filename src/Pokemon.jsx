@@ -76,7 +76,7 @@ const Pokemon = () => {
   };
 
   if (loading) {
-    return <h1>Loading....</h1>;
+    return <h1>Loading...2222.</h1>;
   }
 
   if (error) {
