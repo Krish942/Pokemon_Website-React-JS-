@@ -111,7 +111,7 @@ const Pokemon = () => {
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
         >
-          <option value="asc">Sort A - Z</option>
+          <option value="asc">Sort A - 888</option>
           <option value="desc">Sort Z - A</option>
         </select>
 
